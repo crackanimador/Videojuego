@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhd8wxekrjmpn"]
+
+[ext_resource type="Texture2D" uid="uid://b0d33mkyfqwuu" path="res://Player/Sprites/Monty.Idle_0001.png" id="1_td5on"]
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_td5on")
