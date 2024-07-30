@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cqnr1pvrvrgin"]
+[gd_scene load_steps=8 format=3 uid="uid://cqnr1pvrvrgin"]
 
 [ext_resource type="Texture2D" uid="uid://dkl6wshikqmf5" path="res://pixil-frame-0.png" id="1_xk22d"]
 [ext_resource type="Texture2D" uid="uid://dbkdsh53egimu" path="res://pixil-frame-0_1.png" id="2_liwyt"]
 [ext_resource type="Texture2D" uid="uid://ca781i0aug1jb" path="res://pixil-frame-0_2.png" id="3_i5y5v"]
+[ext_resource type="PackedScene" uid="uid://605h4k5id75o" path="res://Player.tscn" id="4_sxdhu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u2ogf"]
 texture = ExtResource("2_liwyt")
@@ -25,3 +26,6 @@ texture = ExtResource("1_xk22d")
 tile_set = SubResource("TileSet_dicnx")
 format = 2
 layer_0/tile_data = PackedInt32Array(327672, 0, 0, 327673, 0, 0, 327674, 0, 0, 327675, 0, 0, 327676, 0, 0, 327677, 0, 0, 327678, 0, 0, 327679, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 393208, 1, 0, 393209, 1, 0, 393210, 1, 0, 393211, 1, 0, 393212, 1, 0, 393213, 1, 0, 393214, 1, 0, 393215, 1, 0, 327680, 1, 0, 327681, 1, 0, 327682, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 327686, 1, 0, 327687, 1, 0)
+
+[node name="AnimatableBody2D" parent="." instance=ExtResource("4_sxdhu")]
+position = Vector2(-10, 54)
