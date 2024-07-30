@@ -1,15 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://bj4s1ywnpvq08"]
+[gd_scene load_steps=7 format=3 uid="uid://cqnr1pvrvrgin"]
 
 [ext_resource type="Texture2D" uid="uid://dkl6wshikqmf5" path="res://pixil-frame-0.png" id="1_xk22d"]
+[ext_resource type="Texture2D" uid="uid://dbkdsh53egimu" path="res://pixil-frame-0_1.png" id="2_liwyt"]
+[ext_resource type="Texture2D" uid="uid://ca781i0aug1jb" path="res://pixil-frame-0_2.png" id="3_i5y5v"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2g2lc"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u2ogf"]
+texture = ExtResource("2_liwyt")
+0:0/0 = 0
 
-[node name="Bosque" type="Sprite2D"]
-position = Vector2(495, 1175)
-scale = Vector2(5.19141, 5.72917)
-texture = SubResource("CompressedTexture2D_2g2lc")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b6snr"]
+texture = ExtResource("3_i5y5v")
+0:0/0 = 0
 
-[node name="Pixil-frame-0" type="Sprite2D" parent="."]
-position = Vector2(5.77878, -150.109)
-scale = Vector2(1.0205, 1.00909)
+[sub_resource type="TileSet" id="TileSet_dicnx"]
+sources/0 = SubResource("TileSetAtlasSource_u2ogf")
+sources/1 = SubResource("TileSetAtlasSource_b6snr")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_xk22d")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_dicnx")
+format = 2
+layer_0/tile_data = PackedInt32Array(327672, 0, 0, 327673, 0, 0, 327674, 0, 0, 327675, 0, 0, 327676, 0, 0, 327677, 0, 0, 327678, 0, 0, 327679, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 393208, 1, 0, 393209, 1, 0, 393210, 1, 0, 393211, 1, 0, 393212, 1, 0, 393213, 1, 0, 393214, 1, 0, 393215, 1, 0, 327680, 1, 0, 327681, 1, 0, 327682, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 327686, 1, 0, 327687, 1, 0)
