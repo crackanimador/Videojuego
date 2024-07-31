@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const moveSpeed = 25
-const maxSpeed = 50
+const moveSpeed = 70
+const maxSpeed = 100
 const jumpHeight = -300
 const gravity = 15
 
@@ -31,6 +31,7 @@ func _physics_process(_delta):
 	if is_on_floor():
 		if Input.is_action_pressed("ui_accept"):
 			velocity.y = jumpHeight
+			animationPlayer.play("Jump")
 		if friction:
 			velocity.x = lerp(velocity.x, 0.0, 0.5)
 	else:
