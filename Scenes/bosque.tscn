@@ -28,7 +28,7 @@ sources/2 = SubResource("TileSetAtlasSource_5w47t")
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(4, -17.5)
+position = Vector2(0, -17)
 scale = Vector2(1.00787, 1.40972)
 texture = ExtResource("1_xk22d")
 
@@ -41,7 +41,7 @@ layer_0/tile_data = PackedInt32Array(327672, 0, 0, 327673, 0, 0, 327674, 0, 0, 3
 position = Vector2(-6, 56)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(10, -37)
+position = Vector2(6, -40)
 zoom = Vector2(4.5, 4.5)
 
 [node name="Node" parent="." instance=ExtResource("5_8fja4")]
