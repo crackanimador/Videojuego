@@ -14,12 +14,12 @@ func _physics_process(_delta):
 	velocity.y += gravity
 	var friction = false
 
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_key_label_pressed(KEY_D):
 		sprite.flip_h = false
 		animationPlayer.play("Walk")
 		velocity.x = min(velocity.x + moveSpeed, maxSpeed)
 
-	elif Input.is_action_pressed("ui_left"):
+	elif Input.is_key_label_pressed(KEY_A):
 		sprite.flip_h = true
 		animationPlayer.play("Walk")
 		velocity.x = max(velocity.x - moveSpeed, -maxSpeed)
