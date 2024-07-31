@@ -29,7 +29,8 @@ sources/2 = SubResource("TileSetAtlasSource_5w47t")
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1, 12)
+position = Vector2(4, -17.5)
+scale = Vector2(1.00787, 1.40972)
 texture = ExtResource("1_xk22d")
 
 [node name="TileMap" type="TileMap" parent="."]
