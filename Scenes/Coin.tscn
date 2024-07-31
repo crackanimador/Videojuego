@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://byt8oncl2uqbs"]
+[gd_scene load_steps=7 format=3 uid="uid://byt8oncl2uqbs"]
 
+[ext_resource type="Script" path="res://Scripts/Coin2d.gd" id="1_en2tc"]
 [ext_resource type="Texture2D" uid="uid://c2nvjdck32esa" path="res://pixil-frame-0_4.png" id="1_jpgff"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qkrad"]
@@ -47,6 +48,7 @@ _data = {
 scale = Vector2(0.797102, 0.806576)
 
 [node name="Coin2d" type="Area2D" parent="."]
+script = ExtResource("1_en2tc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coin2d"]
 shape = SubResource("CircleShape2D_qkrad")
@@ -61,3 +63,5 @@ speed_scale = 0.211
 [node name="Sprite2D" type="Sprite2D" parent="Coin2d"]
 texture = ExtResource("1_jpgff")
 hframes = 4
+
+[connection signal="body_entered" from="Coin2d" to="Coin2d" method="_on_body_entered"]
