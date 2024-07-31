@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cqnr1pvrvrgin"]
+[gd_scene load_steps=10 format=3 uid="uid://cqnr1pvrvrgin"]
 
 [ext_resource type="Texture2D" uid="uid://dkl6wshikqmf5" path="res://pixil-frame-0.png" id="1_xk22d"]
 [ext_resource type="Texture2D" uid="uid://dbkdsh53egimu" path="res://pixil-frame-0_1.png" id="2_liwyt"]
 [ext_resource type="Texture2D" uid="uid://dshoo27ysxeug" path="res://pixil-frame-0_3.png" id="3_exxlu"]
 [ext_resource type="PackedScene" uid="uid://605h4k5id75o" path="res://Scenes/Player.tscn" id="4_sxdhu"]
 [ext_resource type="PackedScene" uid="uid://byt8oncl2uqbs" path="res://Scenes/Coin.tscn" id="5_8fja4"]
+[ext_resource type="Texture2D" uid="uid://c2nvjdck32esa" path="res://pixil-frame-0_4.png" id="6_ci4x8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u2ogf"]
 texture = ExtResource("2_liwyt")
@@ -46,3 +47,27 @@ zoom = Vector2(4.5, 4.5)
 
 [node name="Node" parent="." instance=ExtResource("5_8fja4")]
 position = Vector2(41, 55)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(-108, -46)
+scale = Vector2(0.8125, 0.8125)
+texture = ExtResource("6_ci4x8")
+hframes = 4
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = -102.0
+offset_top = -60.0
+offset_right = -97.0
+offset_bottom = -37.0
+text = ":"
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+offset_left = -97.0
+offset_top = -54.0
+offset_right = -58.0
+offset_bottom = -31.0
+scale = Vector2(0.642857, 0.641509)
+text = "00"
